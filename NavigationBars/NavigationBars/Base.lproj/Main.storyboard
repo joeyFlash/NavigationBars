@@ -19,36 +19,79 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JsH-Q4-we7">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                 <items>
-                                    <navigationItem title="Navigation App" id="wzV-rw-buS">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="organize" id="zLT-3v-RMa"/>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="stop" id="eOa-xD-10c"/>
+                                    <navigationItem title="StopWatch" id="wzV-rw-buS">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="pause" id="zLT-3v-RMa">
+                                            <connections>
+                                                <action selector="pause:" destination="BYZ-38-t0r" id="0o9-1A-EKl"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cfZ-nT-CxA">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                                 <items>
-                                    <barButtonItem title="Item" id="FzN-W5-sVu"/>
+                                    <barButtonItem systemItem="stop" id="FzN-W5-sVu">
+                                        <connections>
+                                            <action selector="stop:" destination="BYZ-38-t0r" id="lp3-i3-qGX"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="tvT-3W-5S3"/>
-                                    <barButtonItem title="Item" id="cWW-9f-Np2"/>
+                                    <barButtonItem systemItem="play" id="cWW-9f-Np2">
+                                        <connections>
+                                            <action selector="play:" destination="BYZ-38-t0r" id="Rzw-xM-b6f"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m6r-s1-hcu">
+                                <rect key="frame" x="201" y="241" width="198" height="118"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="86" id="dKT-PM-xDf"/>
+                                    <constraint firstAttribute="width" constant="198" id="sWE-Xb-aLv"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="198" id="vC4-XX-THM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="74"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="cfZ-nT-CxA" secondAttribute="bottom" id="1Cw-T6-DgA"/>
                             <constraint firstItem="cfZ-nT-CxA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="3zH-7p-1uU"/>
                             <constraint firstAttribute="trailingMargin" secondItem="cfZ-nT-CxA" secondAttribute="trailing" constant="-20" id="4Sr-U7-3ff"/>
+                            <constraint firstItem="m6r-s1-hcu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="61P-4L-TxR"/>
+                            <constraint firstItem="JsH-Q4-we7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="6tC-IL-R4s"/>
+                            <constraint firstItem="JsH-Q4-we7" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="CQ0-SP-hph"/>
                             <constraint firstAttribute="trailingMargin" secondItem="JsH-Q4-we7" secondAttribute="trailing" constant="-20" id="Dxa-jK-51r"/>
+                            <constraint firstItem="m6r-s1-hcu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IGp-Fs-fXk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JsH-Q4-we7" secondAttribute="trailing" constant="-20" id="KCx-a1-CB1"/>
+                            <constraint firstItem="JsH-Q4-we7" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="KOd-JV-6Yi"/>
                             <constraint firstItem="JsH-Q4-we7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="S2V-fr-QTp"/>
                             <constraint firstItem="JsH-Q4-we7" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="UsT-NI-cJI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JsH-Q4-we7" secondAttribute="trailing" constant="-20" id="bua-rG-KhQ"/>
+                            <constraint firstItem="JsH-Q4-we7" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="eBZ-Zf-RXd"/>
+                            <constraint firstItem="JsH-Q4-we7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="gDh-jC-eAk"/>
+                            <constraint firstItem="JsH-Q4-we7" firstAttribute="centerX" secondItem="m6r-s1-hcu" secondAttribute="centerX" id="jrh-vj-5ES"/>
+                            <constraint firstItem="m6r-s1-hcu" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="241" id="pQI-al-myh"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="CQ0-SP-hph"/>
+                                <exclude reference="UsT-NI-cJI"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="time" destination="m6r-s1-hcu" id="8dh-iX-wa4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="305" y="356"/>
         </scene>
     </scenes>
 </document>
