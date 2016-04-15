@@ -22,18 +22,19 @@ class ViewController: UIViewController {
     @IBOutlet var time: UILabel!
     
     
+    //pause timer button
     @IBAction func pause(sender: AnyObject) {
         
         timer.invalidate()
     }
     
-    
+    //play timer button
     @IBAction func play(sender: AnyObject) {
         
         timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector:#selector(ViewController.updateTime), userInfo: nil, repeats: true)
     }
     
-    
+    //stop timer button
     @IBAction func stop(sender: AnyObject) {
         
         timer.invalidate()
